@@ -139,7 +139,7 @@
     position: absolute;
     width: 6px; /* Thicker start for the comet */
     height: 6px;
-    background: radial-gradient(circle, white 30%, rgba(255, 255, 255, 0)); /* Bright white center with fade */
+    background: radial-gradient(circle, white 90%, rgba(255, 255, 255, 0)); /* Bright white center with fade */
     border-radius: 50%; /* Round star for comet head */
     box-shadow: 0 0 10px 5px white; /* Glow effect around the star head */
     animation: fall linear infinite;
@@ -226,6 +226,7 @@
   .content {
       padding-left: 5%; /* Less left padding for smaller screens */
       font-size: 1.5em; /* Reduce font size on smaller screens */
+      /* height: 20vh; */
   }
 }
 

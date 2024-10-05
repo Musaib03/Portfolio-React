@@ -65,6 +65,7 @@ body {
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column; /* Stack elements vertically on small screens */
+        height:50vh;
     }
 
     .image-container, .bio {
