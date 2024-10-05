@@ -2,9 +2,11 @@
 
 import React from 'react';
 import './About.css'; // Import the CSS file
+import MeteorShowerBackground from './MeteorShowerBackground'; // Ensure correct path to MeteorShowerBackground
 
 const About = () => {
     return (
+        <MeteorShowerBackground>
         <div className="about-container">
             <div className="image-container">
                 <img src="/head.png" alt="Profile" className="profile-image" />
@@ -20,6 +22,7 @@ Beyond the realms of technology, my thirst for knowledge extends to the realms o
                 </p>
             </div>
         </div>
+        </MeteorShowerBackground>
     );
 };
 
