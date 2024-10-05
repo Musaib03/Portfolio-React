@@ -44,6 +44,14 @@ const starShowerBackground = ({ children }) => {
             <div className="star"></div>
             <div className="star"></div>
             <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
             {/* Add more stars as needed */}
         </div>
     );
