@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; 
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: auto; /* Center container horizontally */
+    background-color: black; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    height: 100vh;
+}
+
+.image-container {
+    flex: 1; /* Take 1 part of available space */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+    margin-right: 20px; /* Space between image and bio */
+    animation: moveUpDown 3s ease-in-out infinite; /* Apply animation */
+}
+
+.profile-image {
+    width: 420px; /* Adjust size of the profile image */
+    height: 390px;
+    /* border-radius: 50%; Make the image circular */
+    /* object-fit: cover;  */
+}
+
+/* Keyframes for up and down movement */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-30px); /* Move image up by 20px */
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.bio {
+    flex: 2; /* Take 2 parts of available space */
+    padding: 30px;
+}
+
+.bio h1 {
+    margin: 0;
+    font-size: 4em; /* Larger font size for the heading */
+}
+
+.bio p {
+    line-height: 1.6; /* Improved readability */
+    color:aliceblue; /* Darker text color */
+    font-family: cursive;
+    font-size: larger;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .image-container, .bio {
+        flex: none; /* Reset flex for better control */
+        width: 100%; /* Full width */
+    }
+
+    .image-container {
+        margin-right: 0; /* Reset margin on smaller screens */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+}

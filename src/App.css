@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  padding: 10px 40px; /* Adjust padding */
+  background-color: black;
+  width: 100%; /* Full width */
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  color: aliceblue;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Align links vertically */
+  gap: 30px; /* Space between links */
+  margin: 0; /* Remove left margin */
+}
+
+.navbar-links li {
+  margin: 0; /* Ensure no additional margin */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s; /* Optional: add transition effect */
+}
+
+.navbar-links li a:hover {
+  color: #ddd; /* Change color on hover */
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .navbar-links {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    gap: 20px; /* Space between links */
+    width: 100%; /* Full width for links */
+    margin: 0; /* Reset margin */
+    padding-left: 20px; /* Add some left padding for links */
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show links when active */
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    font-size: 2em; /* Increase font size for mobile */
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s; /* Optional: add transition effect */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+}
+
+
+
+
+
+/* Styling for the typewriter effect */
+.txt-rotate {
+  display: inline;
+  white-space: nowrap;
+  border-right: 0.1em solid #666; /* Cursor effect */
+  font-size: 2em;
+  animation: blink 0.7s infinite;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #666;
+  }
+}
+
+/* .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90deg, rgba(170, 54, 124, 0.5), rgba(74, 47, 189, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+} */
+
+
+
+.meteor-shower-background {
+    height: 100vh; /* Full height of the viewport */
+    background-color: black; /* Dark background for better visibility of stars */
+    position: relative;
+    overflow: hidden; /* Keep stars within the screen */
+}
+
+/* Comet/star styling */
+.star {
+    position: absolute;
+    width: 6px; /* Thicker start for the comet */
+    height: 6px;
+    background: radial-gradient(circle, white 30%, rgba(255, 255, 255, 0)); /* Bright white center with fade */
+    border-radius: 50%; /* Round star for comet head */
+    box-shadow: 0 0 10px 5px white; /* Glow effect around the star head */
+    animation: fall linear infinite;
+}
+
+/* Tail for the comet */
+/* .star::after {
+    content: '';
+    position: absolute;
+    width: 2px; 
+    height: 100px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0));
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); 
+    opacity: 0.9; 
+} */
+
+/* Animation for falling stars */
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(100vw); /* Fall to bottom-right */
+        opacity: 0; /* Fade out at the end */
+    }
+}
+
+/* Create multiple comet instances with varying positions and speeds */
+.star:nth-child(1) {
+    left: 5%;
+    top: -10%;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    left: 10%;
+    top: -5%;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+.star:nth-child(3) {
+    left: 20%;
+    top: -15%;
+    animation-duration: 3.5s;
+    animation-delay: 1s;
+}
+
+.star:nth-child(4) {
+    left: 30%;
+    top: -10%;
+    animation-duration: 2.8s;
+    animation-delay: 1.5s;
+}
+
+.star:nth-child(5) {
+    left: 40%;
+    top: -20%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+/* Centered content */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  position: relative;
+  z-index: 2; /* Ensure content appears above stars */
+  color: white;
+  font-size: 2em;
+  height: 100vh; /* Full viewport height to center vertically */
+  margin-left: 10%; /* Push content towards the left side */
+  text-align: left; /* Align text to the left */
+
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens, make it more responsive */
+  .content {
+      padding-left: 5%; /* Less left padding for smaller screens */
+      font-size: 1.5em; /* Reduce font size on smaller screens */
+  }
+}
+
