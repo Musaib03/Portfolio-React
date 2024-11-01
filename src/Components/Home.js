@@ -5,9 +5,14 @@ import '../App.css'; // Import your CSS
 
 const Home = () => {
     return (
+        <>
         <MeteorShowerBackground>
+        </MeteorShowerBackground>
+
             <div className="content">
                 <span className="tagline">Welcome to my Portfolio</span>
+                {/* <span className="tagline">Aise takta hai aasnmaan ko tu...<br></br>Koi Rehta hai aasmaan hai kya</span> */}
+
                 <h1>
                     {`Hi! I'm Musaib Maqbool `}
                     <br></br>
@@ -17,9 +22,9 @@ const Home = () => {
                         period={1500} // Time to pause before deleting the text
                     />
                 </h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p> */}
             </div>
-        </MeteorShowerBackground>
+        </>
     );
 };
 

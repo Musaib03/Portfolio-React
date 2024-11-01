@@ -78,3 +78,12 @@ body {
         margin-bottom: 20px; /* Add some space below the image */
     }
 }
+
+@media (max-width: 400px) {
+.profile-image {
+    width: 300px; /* Adjust size of the profile image */
+    height: 300px;
+    /* border-radius: 50%; Make the image circular */
+    /* object-fit: cover;  */
+}
+}

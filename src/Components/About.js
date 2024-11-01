@@ -6,7 +6,10 @@ import MeteorShowerBackground from './MeteorShowerBackground'; // Ensure correct
 
 const About = () => {
     return (
+        <>
         <MeteorShowerBackground>
+        </MeteorShowerBackground>
+
         <div className="about-container">
             <div className="image-container">
                 <img src="/head.png" alt="Profile" className="profile-image" />
@@ -22,7 +25,7 @@ Beyond the realms of technology, my thirst for knowledge extends to the realms o
                 </p>
             </div>
         </div>
-        </MeteorShowerBackground>
+        </>
     );
 };
 
