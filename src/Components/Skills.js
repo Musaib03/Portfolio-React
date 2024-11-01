@@ -26,7 +26,10 @@ const Skills = () => {
         { name: 'UI design', description: 'My UI designing skills focus on creating engaging and user-centric interfaces. I combine aesthetic design principles with practical functionality to ensure a seamless user experience. By employing tools such as wireframes and prototypes, I translate user needs into intuitive designs, enhancing usability and promoting brand consistency across digital platforms.' },
 	]
     return (
+        <>
 		<MeteorShowerBackground>
+		</MeteorShowerBackground>
+
         <div className="page-container">
             {/* Left: 3D Sphere */}
             <div className="sphere-container">
@@ -74,7 +77,7 @@ const Skills = () => {
                 </div>
             </div>
         </div>
-		</MeteorShowerBackground>
+        </>
     );
 };
 
