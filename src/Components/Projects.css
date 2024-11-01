@@ -1,0 +1,123 @@
+/* Projects container */
+.projects-container {
+    display: grid;
+	margin-top: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px; 
+    grid-row-gap: 0px;
+    padding: 40px;
+    background-color: black; /* Set background to black */
+	width: 100%;
+    height: 100vh ;
+    overflow: visible !important;
+
+
+    .project-card {
+        position: relative;
+        /* background-color: rgba(255, 255, 255, 0.1); Transparent card background */
+        background: transparent;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2); /* Lighter white box shadow */
+        /* backdrop-filter: blur(5px); Light blur effect for a modern look */
+        transition: transform 0.3s ease-in-out;
+        margin: 0; /* Remove margin to fit cards */
+        width: calc(100% - 20px);
+        height: 314px;
+    }
+
+}
+.projects-head h2 {
+	margin-top: 40px;
+	color:white;
+	margin-left: 40%;
+	font-size: 40px;
+}
+
+/* Project card (transparent with white box shadow) */
+
+
+.project-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Project image */
+.project-image {
+    width: 90%;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Small border around the image */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Project title */
+.project-card h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Project description */
+.project-card p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* GitHub button */
+.github-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.github-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        grid-gap: 30px; /* Adjust gap for medium screens */
+		/* height:min-content; */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* 1 column on tablet/mobile */
+        /* grid-gap: 20px; Adjust gap for smaller screens */
+		/* grid-column-gap: 40px; Adjusted gap between cards */
+		/* grid-row-gap: 30px; Adjusted gap between cards */
+		height:auto;
+    }
+	.projects-head h2 {
+		color:white;
+		margin-left: 30%;
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+		grid-template-columns: 1fr; /* 1 column on tablet/mobile */
+        padding: 20px; /* Reduce padding on mobile */
+    }
+
+    .project-card {
+        padding: 15px; /* Reduce padding on cards for mobile */
+    }
+
+    .github-btn {
+        font-size: 0.9rem; /* Slightly smaller button text on mobile */
+    }
+}
