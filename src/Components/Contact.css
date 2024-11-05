@@ -1,0 +1,75 @@
+.get-in-touch-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	color: white;
+	background-color: rgb(19, 18, 18); /* Dark background for contrast */
+	max-width: 1400px;
+	margin: auto;
+	box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2); /* Lighter white box shadow */
+	border-radius: 10px;
+	margin-bottom: 50px;
+  }
+  
+  .left-section {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .contact-image {
+	width: 100%;
+	max-width: 400px;
+  }
+  
+  .right-section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 60px;
+  }
+  
+  .contact-icons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	margin-top: 20px;
+  }
+  
+  .contact-item {
+	font-size: 1.2em;
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  
+  .contact-item .icon {
+	font-size: 2em;
+	margin-right: 15px;
+  }
+  
+  /* Icon color styles */
+  .instagram .icon { color: #b32973; }
+  .github .icon { color: #333; }
+  .linkedin .icon { color: #0A66C2; }
+  .twitter .icon { color: #1DA1F2; }
+  .email .icon { color: #EA4335; }
+  .phone .icon { color: #34A853; }
+  
+  .location {
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+	margin-top: 30px;
+  }
+  
+  .location-icon {
+	font-size: 2em;
+	margin-right: 15px;
+  }
+  
